@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int obarniBitna(int number, int index);
+
+
+int main(){
+    int a, b;
+    a = 7;
+    b = 3;
+    printf("%d\n", obarniBitna(a, b));
+
+    return 0;
+}
+
+int obarniBitna(int number, int index){
+    int mask = 1 << index;
+    int result = number ^ mask;
+    return result;
+}
