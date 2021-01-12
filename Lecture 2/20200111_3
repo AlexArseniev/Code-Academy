@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int iz4istiBitna(int value, int position);
+
+
+int main()
+{
+    int a, b;
+    a = 15;
+    b = 4;
+    printf("%d", iz4istiBitna(a, b));
+
+    return 0;
+}
+
+int iz4istiBitna(int number, int index)
+{
+    int mask = 1 << index - 1;
+    mask=~mask;
+    int res = number & mask;
+    return res;
+}
