@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int null(int number);
+
+
+int main(){
+    int a;
+    a = 15;
+    printf("%d", null(a));
+    return 0;
+}
+
+int null(int number){
+    int mask = 1431655765;
+    int result = number & mask;
+    return result;
+}
