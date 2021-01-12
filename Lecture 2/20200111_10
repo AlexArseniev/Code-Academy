@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int delBits(int number, int index);
+
+int main(){
+    int a, b;
+    a = 100;
+    b = 6;
+    printf("%d\n", delBits(a, b));
+    return 0;
+}
+
+int delBits(int number, int index){
+
+    int mask;
+    int bitsToCut = index - 1;
+    mask = mask << bitsToCut;
+    mask = ~mask;
+    number = number & mask;
+    return number;  
+}
