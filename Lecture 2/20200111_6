@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int a, b;
+    a = 10;
+    b = 2;
+    int mask = 1 << b;
+    int result = a ^ mask;
+    
+    printf("%d", result);
+
+    return 0;
+}
