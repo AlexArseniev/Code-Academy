@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int reverseBit(int number);
+
+
+int main(){
+  int a;
+  a = 3822; 
+  printf("%d\n", reverseBit(a));
+  return 0;
+}
+
+int reverseBit(int number){
+  int mask = 0b00000001111100;
+  mask = ~mask;
+  number = number & mask;
+  return number;
+}
