@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int vdigniBitna(int value, int position);
+
+int main(){
+
+    int a, b;
+    a = 7;
+    b = 3;
+    printf("%i", vdigniBitna(a, b));
+
+    return 0;
+}
+
+int vdigniBitna(int number, int index){
+
+    int mask = 1 << index;
+    int result = number | mask;
+    return result;
+}
