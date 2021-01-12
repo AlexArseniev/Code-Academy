@@ -1,0 +1,20 @@
+  
+#include <stdio.h>
+
+int vzemiBitNa(int number, int index);
+
+int main(){
+    int a, b;
+    a = 23;
+    b = 4;
+    printf("%d",vzemiBitNa(a, b));
+
+    return 0;
+}
+
+int vzemiBitNa(int number, int index){  
+    int mask=1<<index-1;
+    int result= number & mask;
+    result=result>>index-1;
+    return result;
+}
