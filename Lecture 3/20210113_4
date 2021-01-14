@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void bin(unsigned n){
+    unsigned i;
+    
+    for (i = 1 << 7; i > 0; i = i >> 1)
+    (n & i)? printf("1"): printf("0");
+    printf("\n");
+}
+
+int main(){
+    char a, result;
+    unsigned char b;
+
+    a = 10; 
+    b = - 127;
+    result = a + b;
+
+    printf("%c\n", result);
+    printf("%d\n", result);
+    bin(result);
+
+    return 0;
+}
