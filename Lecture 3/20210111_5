@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    short int valueOne = 0x7FFF;
+    printf("%d\n", sizeof(valueOne));
+    float valueTwo = 1.9873749;
+    printf("%d\n", sizeof(valueTwo));
+    int valueThree = 0x7FFFFFFF;
+    printf("%d\n", sizeof(valueThree));
+    unsigned long int valueFive = 11111;
+    printf("%d'\n", sizeof(valueFive));
+    
+  return 0;
+}
