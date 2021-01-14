@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(){
+unsigned char camper = 3;
+short int camperPrice = 100;
+unsigned char caravan = 3;
+short int caravanPrice = 90;
+int rez;
+
+printf("Dobre doshli v Karavani Kempeti pod naem\n");
+printf("Ako zelaete karavana natisnete 1\n");
+printf("Ako zelaete kemper natisnete 2\n");
+
+while (rez != 1 || rez != 2) {
+    scanf("%d", &rez);
+
+    if(rez == 1){
+        printf("Izbrahte karavana\n");
+        printf("Cenata i e: %i leva", caravanPrice);
+        break;
+    } else if (rez == 2){
+        printf("Izbrahte kemper\n");
+        printf("Cenata mu e: %i leva", camperPrice);
+        break;
+    } else{
+        printf("Vuveli ste greshna cifra\n");
+    }    
+}
+
+return 0;
+}
