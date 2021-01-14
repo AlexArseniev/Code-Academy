@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <float.h>
+
+int main(){
+  float a = 4.9876543;
+  double b = 7.123456789012345678890;
+  long double c = 18398458438583853.28;
+  long double d = 18398458438583853.39875937284928422;
+     
+   printf("%f\n", a);
+   printf("%f\n", b);
+   printf("%d\n", sizeof b);
+   printf("%ld\n", c);
+   printf("%llf\n", d);
+
+   return 0; 
+}
