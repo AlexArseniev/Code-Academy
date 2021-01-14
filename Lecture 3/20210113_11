@@ -1,0 +1,86 @@
+#include <stdio.h>
+
+int main(){
+        
+    float tomatoPrice = 4.5;
+    float flourPrice = 1.8;
+    float yogurtPrice = 0.5;
+    float icecreamPrice = 0.6;
+    float candyPrice = 1.5;
+    float lollipopPrice = 0.15;
+    float currentBill;
+    int rez1;
+       
+    printf("Zdraveite, dobre doshli v nashia magazin! Dnes predlagame - presni domati, brashno, kiselo mliako, sladoled na funiika i blizalki.\n");
+        
+        while (1){
+
+            printf("Ako iskate domati natisnete - 1\n");
+            printf("Ako iskate brashno natisnete - 2\n");
+            printf("Ako iskate kiselo mliako natisnete - 3\n");
+            printf("Ako iskate sladoled natisnete - 4\n");
+            printf("Ako iskate bonbon natisnete - 5\n");
+            printf("Ako iskate blizalka natisnete - 6\n");
+            printf("Ako iskate da izlezete ot menuto natisnete - 7\n");
+
+            scanf("%d", &rez1);
+        
+
+            if(rez1 == 7){
+                break;
+            }
+
+                while (rez1 <= 6){
+
+                    if(rez1 == 1){
+                        float weight;
+                        printf("Kolko kilograma jelaete?\n");
+                        scanf("%f", &weight);
+                        currentBill += weight * tomatoPrice;
+                        printf("Vashata smetka e: %5.2f leva\n\nJelaete li oshte neshto?\n", currentBill);
+                        break;
+                    } else if (rez1 == 2){
+                        float weight;
+                        printf("Kolko paketa jelaete?\n");
+                        scanf("%f", &weight);
+                        currentBill += weight * flourPrice;
+                        printf("Vashata smetka e: %3.2f leva\n\nJelaete li oshte neshto?\n", currentBill);
+                        break;
+                    } else if (rez1 == 3){
+                        float weight;
+                        printf("Kolko kofichki jelaete?\n");
+                        scanf("%f", &weight);
+                        currentBill += weight * yogurtPrice;
+                        printf("Vashata smetka e: %3.2f leva.\n\nJelaete li oshte neshto?\n", currentBill);
+                        break;
+                    } else if(rez1 == 4){
+                        float weight;
+                        printf("Kolko sladoleda jelaete?\n");
+                        scanf("%f", &weight);
+                        currentBill += weight * icecreamPrice;
+                        printf("Vashata smetka e: %3.2f leva\n\nJelaete li oshte neshto?\n", currentBill);
+                        break;
+                    } else if (rez1 == 5){
+                        float weight;
+                        printf("Kolko bonboni jelaete?\n");
+                        scanf("%f", &weight);
+                        currentBill += weight * candyPrice;
+                        printf("Vashata smetka e: %3.2f leva\n\nJelaete li oshte neshto?\n", currentBill);
+                        break;
+                    } else if(rez1 == 6){
+                        float weight;
+                        printf("Kolko blizalki jelaete?\n");
+                        scanf("%f", &weight);
+                        currentBill += weight * lollipopPrice;
+                        printf("Vashata smetka e: %3.2f leva\n\nJelaete li oshte neshto?\n", currentBill);
+                        break;
+                    }
+                    
+                }
+
+        }
+
+     printf("Vashata smetka e na obshta stoinost: %5.2f leva.\n", currentBill);
+
+    return 0;
+}
