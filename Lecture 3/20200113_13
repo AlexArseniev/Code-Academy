@@ -8,10 +8,15 @@ int main(){
     double e = -48.907;
 
     printf("%d\n", sizeof(a));
+    printf("%c\n\n", a);
     printf("%d\n", sizeof(b));
+    printf("%i\n\n", b);
     printf("%d\n", sizeof(c));
+    printf("%d\n\n", c);
     printf("%d\n", sizeof(d));
+    printf("%f\n\n", d);
     printf("%d\n", sizeof(e));
+    printf("%lf\n", e);
 
     return 0;
 }
