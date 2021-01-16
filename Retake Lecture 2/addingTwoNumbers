@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int addDigit(int a, int b);
+
+int main(){
+
+    printf("%d", addDigit(1,7));
+
+    return 0;
+}
+
+int addDigit(int a, int b){
+    return a + b;
+}
