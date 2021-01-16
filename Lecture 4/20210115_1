@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+extern int g_SomeRandomNumber; 
+
+int main(void){
+    printf("Global variable = %d\n", g_SomeRandomNumber);
+    
+    return 0;
+}
+
+int g_SomeRandomNumber = 26;
