@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void bin(unsigned n){
+    unsigned i;
+    
+    for (i = 1 << 7; i > 0; i = i >> 1)
+    (n & i)? printf("1"): printf("0");
+    printf("\n");
+}
+
+int main(){
+    int nX = 1;
+    int nY = 1;
+    nY = nX + 1; 
+    bin(nY);
+    nX = 1 + nX + nY;
+    bin(nX);
+    nY = 2 * nX ++ * (nY = nX * 3) + nX ++ + nY --;
+    bin(nY);
+    printf("nX = %d, nY= %d\n", nX, nY);
+    return 0;
+}
