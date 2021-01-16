@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+
+int main(void){
+    
+    char s[] = "How many symbols do you see?";
+    int count = 0;
+   
+    while (s[count] != '\0'){
+        count++;   
+    }
+    
+    printf("The lenght is: %d", count);
+
+    return 0;
+}
