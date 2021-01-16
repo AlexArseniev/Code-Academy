@@ -1,0 +1,79 @@
+#include <stdio.h>
+
+int main(){
+unsigned char camper = 3;
+short int camperPrice = 100;
+unsigned char caravan = 3;
+short int caravanPrice = 90;
+float bill = 0;
+int rez;
+
+printf("          Dobre doshli v Karavani Kempeti pod naem\n");
+printf("------------------------------------------------------------\n");
+
+    while (1){
+
+        printf("Ako jelaete karavana natisnete 1\n");
+        printf("Ako jelaete kemper natisnete 2\n"); 
+        printf("Ako jelaete da izlezete ot menuto natisnete 9\n");
+
+        while (rez != 1 || rez != 2 || rez != 9) {
+        scanf("%d", &rez);
+
+            if(rez == 1){
+                char answer;
+                printf("Izbrahte karavana\n");
+                printf("Cenata i e: %i leva za edin den. Jelaete li da naemete karavanata?\n", caravanPrice);
+                printf("Y/N?\n");
+                scanf("%c", &answer);
+
+                if(answer == 'Y' || answer =='y'){
+                    short dayToRent;
+                    printf("Za kolko dni iskate da naemete karavanata?\n");
+                    scanf("%d", &dayToRent);
+                    bill += caravanPrice * dayToRent;
+                    printf("Vie nahte karavana za %d dni. Vashata smetka e na stoinost: %5.2f leva.\nJelaete li oshte nalichni produkti?\n\n", dayToRent, bill);
+                    break;
+                } else if(answer == 'N' || answer == 'n'){
+                    printf("Vie izbrahte \"N\". Tova shte vi vurne v nachalnoto menu.\n\n");
+                    break;
+                }
+        
+            } else if (rez == 2){
+                char answer;
+                printf("Izbrahte kemper\n");
+                printf("Cenata mu e: %i leva. Jelaete li da naemete kemper?\n", camperPrice);
+                printf("Y/N\n");
+                scanf("%c", &answer);
+                
+                if(answer == 'Y' || answer =='y'){
+                    short daysToRent;
+                    printf("Za kolko dni iskate da naemete kemper?\n");
+                    scanf("%d", &daysToRent);
+                    bill += caravanPrice * daysToRent;
+                    printf("Vie naehte kemper za %d dni. Vashata smetka e na stoinost: %5.2f leva.\nJelaete li oshte nalichni produkti?\n\n", daysToRent, bill);
+                    break;
+                } else if(answer == 'N' || answer == 'n'){
+                    printf("Vie izbrahte \"N\". Tova shte vi vurne v nachalnoto menu.\n\n");
+                    break;
+                }
+            
+            } else if (rez == 9){
+                printf("Blagodarim, che ni posetihte. Shte vi ochakvame otnovo.\n");
+                break;
+            } else{
+                printf("Vuveli ste greshna cifra\n");
+            }    
+        }
+
+        if(rez == 9) {
+            break;
+        }
+
+    }
+    
+    if (bill > 0) {
+        printf("Vashata smetka e na obshta stoinost: %5.2f", bill);
+    }
+ return 0;
+}
