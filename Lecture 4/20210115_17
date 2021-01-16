@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+const float gPi = 3.14159;
+
+float findTheArea(float radius){
+    return gPi * radius * radius;
+}
+
+float findEllips(float a, float b){
+    return gPi * a * b;
+}
+
+int main(){
+    printf("%4.5f\n", findTheArea(1));
+    printf("%4.5f\n", findTheArea(1.5));
+    printf("%4.5f\n", findTheArea(13));
+    printf("%4.5f\n", findEllips(1, 2));
+    return 0;
+}
