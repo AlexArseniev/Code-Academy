@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int g_Test = 0;
+
+void test(){
+   g_Test++;
+} 
+
+int main(){
+
+   test(g_Test);
+   test(g_Test);
+   test(g_Test);
+
+   printf("%d", g_Test);
+   return 0;
+}
