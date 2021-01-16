@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int promeniBit(int value, int index){
+    int mask = 1 << index;
+    value = value ^ mask;
+    return value;
+}
+
+int main(){
+    int a = 42;
+    int b = 4;
+    printf("%d", promeniBit(a,b));
+    return 0;
+}
