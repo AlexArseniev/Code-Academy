@@ -1,0 +1,11 @@
+#include <stdio.h>
+const char c_chNew_Line = '\n';
+const unsigned c_uMax_LOOP_COUNT = 1024 * 0xFFFF;
+const double c_dfREAL_VALUE = 1.0L / 3.0;
+
+int main(void){
+    printf("Constant: c_uMax_LOOP_COUNT = %d %c", c_uMax_LOOP_COUNT, c_chNew_Line);
+    printf("Constant: c_dfReal_Value = %f %c", c_dfREAL_VALUE, c_chNew_Line);
+    
+    return 0;
+}
