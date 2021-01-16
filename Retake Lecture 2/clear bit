@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int clearBit(int value, int index){
+    int mask = 1 << index;
+    mask = ~mask;
+    value &= mask;
+    return value;
+}
+
+int main(){
+    int a = 9;
+    int b = 3;
+    printf("%d", clearBit(a,b));
+    return 0;
+}
