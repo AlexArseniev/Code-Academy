@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+
+int main(){ 
+
+  int a = 3;
+  int b = 5;
+  int and = 3 & 5;
+  int or = 3 | 5;
+  int xor = 3 ^ 5;
+
+  printf("%d\n", and);
+  printf("%d\n", or);
+  printf("%d\n", xor);
+
+  return 0;
+}
