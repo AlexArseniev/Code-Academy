@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(void){
+    double first = 0xBB;
+    long long second = 0xBB;
+    unsigned long long third = 0xBB;
+
+    printf("first = %lf\nsecond = %lld\nthird = %lld", first, second, third);
+    return 0;
+}
