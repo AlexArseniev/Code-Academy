@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void test();
+
+int main()
+{
+    test();
+    test();
+    test();
+}
+
+void test(){
+  static short int a = 4;
+  static short int count = 1;
+
+    if (count==3){
+         a+=1;
+         printf("%d\n", a);
+    } else {
+      a+=1;
+      count+=1;
+    }  
+    
+}
