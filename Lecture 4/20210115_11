@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){ 
+ char str[] = "Hello";
+ char rts[6] = {0,0,0,0,0,0};
+
+ short i = 0;
+ short end = 4;
+
+ while (str[i] != '\0'){
+     rts[end] = str[i];
+     i++;
+     end--;
+ }
+ 
+ printf("%s", rts);
+
+return 0;
+}
