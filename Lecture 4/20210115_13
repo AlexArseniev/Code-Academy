@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+
+    char str[] = "HELLO";
+    char smallChar[6] = {0,0,0,0,0,0};
+
+    short i = 0;
+
+    while (str[i] != '\0'){
+        smallChar[i] = str[i] + 32; //всяка главна буква в Ascii + 32 ще даде lower case на същата буква.
+        i++;
+    }
+    printf("%s", smallChar);
+
+    return 0;
+}
