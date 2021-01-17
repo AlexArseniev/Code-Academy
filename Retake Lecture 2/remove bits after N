@@ -1,0 +1,12 @@
+int removeBits(int number, int index) {
+    int mask = 1 << index - 1;
+    number = number & mask;
+    return number;
+}
+
+int main(){
+    int a = 255;
+    int b = 4;
+    printf("%d", removeBits(a,b));
+    return 0;
+}
