@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int findTheBit(int value){
+    int count = 0;
+    while (value != 1){
+        value = value >> 1;
+        count++; 
+    }
+    return count;
+}
+
+
+int main(){
+    int a = 3;
+    printf("%d", findTheBit(a));
+    return 0;
+}
