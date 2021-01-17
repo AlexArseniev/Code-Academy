@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int bits3to7IntoZero(int value){
+    int mask = 0xF07;
+    value = value & mask;
+    return value;
+}
+
+int main(){
+    int number = 255;
+    printf("%d", bits3to7IntoZero(number));
+    return 0;
+}
