@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void){
+    int x = 10, y = 10;
+    int true, false;
+    true = x == y; // == това е оператор за сравнение. Проверява дали 10 е равно на 10. Това ще ни върне 1.
+    false = x != y; // != това е оператор за сравнение. Проверява дали 10 е различно от 10. Това ще ни върне 0.
+
+    printf("This statement is true: %d\n", true);
+    printf("This statement is false: %d\n", false);
+
+    return 0; 
+}
