@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(void) {
+    
+    printf("Please, enter four numbers:\n");
+    int nA; /* използвайте scanf */
+    int nB;
+    int nX;
+    int nY;
+    scanf("%d", &nA);
+    scanf("%d", &nB);
+    scanf("%d", &nX);
+    scanf("%d", &nY);
+    if ( nA > nB && nA !=0 ) {
+        printf("&& Operator : Both conditions are true\n");
+    }
+ 
+    if ((nA + nB) > (nX + nY)) {
+        printf("Sborut na %d i %d e po-goliam ot sbora na %d i %d\n", nA, nB, nX, nY);
+    } else {
+        printf("Sborut na %d i %d e po-goliam ot sbora na %d i %d\n", nY, nX, nA, nB);
+    }
+
+    if(nA != nB && nA != nX && nA != nY && nB != nX && nB != nY && nY != nX){
+        printf("Vsichki vuvedeni chisla sa razlichni\n");
+    }    
+}
