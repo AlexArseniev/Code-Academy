@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void){
+    float iX = 13;
+    float iY = 44.9;
+    float iResult = 0;
+    iResult = iY + iX;
+    printf("%.2f + %.2f = %.2f \n", iX, iY, iResult);
+    iResult = iY * iX;
+    printf("%.2f * %.2f = %.2f \n", iY, iX, iResult);
+    
+    while (iX >= iY){
+        iX -= iY;
+    }
+    printf("%.2f % %.2f Remainder: %.2f\n", iY, iX, iResult);
+    return 0;
+}
