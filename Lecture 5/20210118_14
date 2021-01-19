@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int addition(int num1, int num2);
+int multiplication(int num3, int num4);
+int substraction(int num5, int num6);
+
+int main(void) {
+    int nX = 1, nY = 2;
+    printf("\nInit values: X= %d, Y= %d\n", nX, nY);
+    nX = addition(1,2), multiplication(2,3), 3 + 4; 
+    nY = ( 7 * 8, 8 + 9, substraction(9,4));
+    printf("\nX= %d, Y= %d\n", nX, nY);
+    return 0;
+}
+
+int addition(int num1, int num2){
+    return num1 + num2;
+}
+
+int multiplication(int num3, int num4){
+    return num3 * num4;
+}
+
+int substraction(int num5, int num6){
+    return num5 - num6;
+}
