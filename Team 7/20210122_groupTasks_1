@@ -1,0 +1,158 @@
+//Задача:
+//Направете програма, която при въвеждане на месец от годината като число извежда на екран колко дни има в месеца
+// - “Посочения месец има ... дни).
+// The key value method - https://beginnersbook.com/2013/04/calculating-day-given-date/
+ 
+ 
+#include <stdio.h>
+#include <math.h>
+ 
+int mesec(int);
+int ans(int);
+ 
+unsigned short valueOfMonth;
+unsigned short daysInMonth;
+unsigned short dayOftheWeek;
+unsigned int year;
+unsigned short month;
+unsigned short day;
+ 
+int main(void){
+ 
+    unsigned short lastTwoDigits;
+    unsigned short finalNumber;
+    unsigned short yearCode;
+ 
+    printf("Enter a year: ");
+    scanf("%d", &year);
+ 
+    printf("Enter a month: ");
+    scanf("%d", &month);
+ 
+    printf("Enter a day: ");
+    scanf("%d", &day);
+ 
+    mesec(month);
+ 
+    lastTwoDigits = year % 100;
+    finalNumber = lastTwoDigits;
+    finalNumber = floor(finalNumber / 4);
+    finalNumber += day;
+    finalNumber += valueOfMonth;
+ 
+    if((month == 1 || month == 2) && (year % 4 == 0)){
+        finalNumber--;
+    }
+ 
+    while (year > 2100 || year < 1700){
+        if(year > 2100) {
+            year -= 400;
+        } else if (year < 1700){
+            year += 400;
+        }
+    }
+ 
+    if(year > 2000) {
+        yearCode = 6;
+    } else if(year > 1900) {
+        yearCode = 0;
+    } else if(year > 1800) {
+        yearCode = 2;
+    } else {
+        yearCode = 4;
+    }
+ 
+    finalNumber += yearCode; 
+    finalNumber += lastTwoDigits;
+    dayOftheWeek = finalNumber % 7;
+ 
+    ans(dayOftheWeek);
+ 
+    return 0;
+}
+ 
+int mesec(int month){
+ 
+    switch (month) {
+        case (1):
+            valueOfMonth = 1;
+            daysInMonth = 31;
+            break;
+        case (2):
+            valueOfMonth = 4;
+            if(year % 4 == 0){
+                daysInMonth = 29;
+            } else {
+                daysInMonth = 28;
+            }
+            break;
+        case (3):
+            valueOfMonth = 4;
+            daysInMonth = 31;
+            break;
+        case (4):
+            valueOfMonth = 0;
+            daysInMonth = 30;
+            break;
+        case (5):
+            valueOfMonth = 2;
+            daysInMonth = 31;
+            break;
+        case (6):
+            valueOfMonth = 5;
+            daysInMonth = 30;
+            break;
+        case (7):
+            valueOfMonth = 0;
+            daysInMonth = 31;
+            break;
+        case (8):
+            valueOfMonth = 3;
+            daysInMonth = 31;
+            break;
+        case (9):
+            valueOfMonth = 6;
+            daysInMonth = 30;
+            break;
+        case (10):
+            valueOfMonth = 1;
+            daysInMonth = 31;
+            break;
+        case (11):
+            valueOfMonth = 4;
+            daysInMonth = 30;
+            break;
+        case (12):
+            valueOfMonth = 6;
+            daysInMonth = 31;
+            break;
+    }
+ 
+}
+ 
+int ans (int dayOfTheWeek){
+    switch (dayOftheWeek){
+        case(0):
+            printf("%d.%d.%d se pada subota.\nPosocheniat mesec ima %d dni.", day, month, year, daysInMonth);
+            break;
+        case(1):
+            printf("%d.%d.%d se pada nedelia.\nPosocheniat mesec ima %d dni.", day, month, year, daysInMonth);
+            break;
+        case(2):
+            printf("%d.%d.%d se pada ponedelnik.\nPosocheniat mesec ima %d dni.", day, month, year, daysInMonth);
+            break;
+        case(3):
+            printf("%d.%d.%d se pada vtornik.\nPosocheniat mesec ima %d dni.", day, month, year, daysInMonth);
+            break;
+        case(4):
+            printf("%d.%d.%d se pada sriada.\nPosocheniat mesec ima %d dni.", day, month, year, daysInMonth);
+            break;
+        case(5):
+            printf("%d.%d.%d se pada chetvurtuk.\nPosocheniat mesec ima %d dni.", day, month, year, daysInMonth);
+            break;
+        case(6):
+            printf("%d.%d.%d se pada petuk.\nPosocheniat mesec ima %d dni.", day, month, year, daysInMonth);
+            break;
+    }
+ 
+}
