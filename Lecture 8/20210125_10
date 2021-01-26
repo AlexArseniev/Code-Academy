@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void){
+
+    int c;
+    char intput[200];
+    char output[200];
+    int counter = 0;
+    int beggining = 0;
+    int end = 0;
+
+    while ((c = getchar()) != EOF){
+        intput[counter] = c;
+        ++counter;
+    }
+    
+    end = counter - 1;
+
+    for (beggining; beggining < counter; beggining++){
+        output[beggining] = intput[end];
+        end--;
+    }
+
+    printf("%s", output);
+
+    return 0;
+}
