@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void){
+
+    int c;
+    int countLetters = 0;
+    int countNmbers = 0;
+
+    while ((c = getchar()) != EOF){
+        
+        if((c >= 65 && c <= 95) || (c >= 97 && c <= 122)){
+            countLetters++;
+        } else if(c >= 48 && c<=57){
+            countNmbers++;
+        } 
+        putchar(c);
+    }
+
+    printf("The letters are: %d\nThe numbers are: %d\n", countLetters, countNmbers);
+    
+    return 0;
+}
