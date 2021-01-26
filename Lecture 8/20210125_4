@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+  int c, spaces, flag;
+
+  spaces = 0;
+  flag = 0;  
+  while ((c = getchar()) != EOF) {
+
+      if (c == ' ') {
+           spaces++;
+           flag = 0;
+       }
+      else if (flag == 0) {
+          flag = 1;
+          spaces = 0;
+      }
+      
+      if (c == ' ' && spaces > 1 && flag == 0)
+          c = 0;            
+      putchar(c);
+  }
+  return 0;
+}
