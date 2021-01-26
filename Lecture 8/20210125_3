@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void){
+
+    int c;
+    int spaceCount = 0; 
+    int tabCount = 0;
+    int newLine = 0;
+
+   
+    while ((c = getchar()) != EOF){
+        
+        if (c == ' '){
+            spaceCount++;              
+        } else if (c == '\t'){
+            tabCount++;
+        } else if (c == '\n'){
+            newLine++;
+        }
+    }
+    
+    printf("Space count: %d\nTab count: %d\nNew lines: %d\n", spaceCount, tabCount, newLine);
+
+    return 0;
+}
