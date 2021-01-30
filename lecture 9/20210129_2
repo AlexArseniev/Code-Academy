@@ -1,0 +1,31 @@
+/*
+Задача 2. Напишете функция area() без параметри. Поискайте от
+потребителя да въведе радиуса с помощта на функциите :
+printf("Enter a radius\n");
+scanf("%lf", &r);
+Използвайте горната функция 1.за изчисляване на площта на кръг,
+която написахме преди малко за да изчислите площта на кръга с този
+радиус и върнете резултата: 
+*/
+
+#include <stdio.h>
+
+float pi = 3.1415;
+double r;
+
+int area(){
+    printf("Enter a radius\n");
+    scanf("%lf", &r);
+}
+
+float findArea(int r){
+
+    float result = pi * r * r;
+    return result;
+}
+
+int main(){
+    area();
+    printf("%.3f", findArea(r));
+    return 0;
+}
