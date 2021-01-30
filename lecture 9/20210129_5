@@ -1,0 +1,24 @@
+/*
+Задача 5. Напишете програма на С, която чрез функция проверява
+дали дадено число е четно или не.
+*/
+
+#include <stdio.h>
+
+void evenOrOdd(int a){
+    if(a % 2 == 0){
+        printf("The number %d is even", a);
+    } else {
+        printf("The number %d is odd", a);
+    }
+}
+
+int main(void){
+
+    int number = 0;
+    printf("Please enter a number: ");
+    scanf("%d", &number);
+    evenOrOdd(number);
+
+    return 0;
+}
