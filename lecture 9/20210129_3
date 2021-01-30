@@ -1,0 +1,22 @@
+/*
+Задача 3. Напишете функция, която връща резултат (а+в)*4.
+*/
+
+#include <stdio.h>
+
+int add(int a, int b){
+    return (a + b) * 4;
+}
+
+int main(){
+
+    int numOne, numTwo;
+    printf("Enter first numbber: ");
+    scanf("%d", &numOne);
+    printf("Enter second numbber: ");
+    scanf("%d", &numTwo);
+    
+    int result = add(numOne,numTwo);
+    printf("Result: %d", result);
+    return 0;
+}
