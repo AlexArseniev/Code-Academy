@@ -1,0 +1,62 @@
+/*
+
+Направете програма за изчисляване на баркод UPC(Universal Product Code)
+Производителите на стоки от години поставят баркодове на своите продукти. Всеки баркод представлява 12 числа:
+Първото число е типа на продукта
+Лявата група числа представят производителя,
+Дясната група числа представят продукта
+Последното число е за проверка.
+
+0 13800 15173 5
+
+Ето алгоритъма за изчисление на проверката за грешка:
+Съберете нечетните числа: първото, третото, петото и т.н.
+Съберете четните числа: второто, четвъртото и т.н
+Умножете първата сума по 3 и добавете втората сума.
+Извадете 1 от тотала
+Делите тотала по модул на 10.
+Изваждате резултата от 9 и трябва да получите последната цифра.
+
+*/
+
+#include <stdio.h>
+
+
+int multiply(int numOne, int numTwo);
+int moduleDevision(int number);
+
+
+int main(void){
+
+    int barcode[12] = {0,1,3,8,0,0,1,5,1,7,3,5};
+    int oddNumbers = 0;
+    int evenNumbers = 0;
+    int index = 0;
+
+    while (index < 12){
+        if(index % 2 == 0){
+            evenNumbers += barcode[index];
+     
+        } else {
+            oddNumbers += barcode[index];
+        }
+        index++;
+    }
+    
+    int result = multiply(oddNumbers, evenNumbers);
+    result = moduleDevision(result);
+    
+    printf("%d\n", result);
+    return 0;
+}
+
+int multiply(int numOne, int numTwo){
+    numOne *= 3;
+    numOne += numTwo;
+    numOne--;
+    return numOne;
+}
+
+int moduleDevision(int number){
+   return 9 - (number % 10);
+}
