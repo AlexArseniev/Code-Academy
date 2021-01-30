@@ -1,0 +1,42 @@
+/*
+Задача 7. Напишете програма на С, която съдържа 2 функции.
+1.Първата смята лице на правоъгълен триъгълник.
+2.Втората използва лицето на триъгълника, за да сметне лице на
+четириъгълник със същите дължини на страните, като раменете на
+триъгълника.
+Напишете прототипите на функциите най-отгоре, а телата им под
+мейн функцията.
+*/
+
+#include <stdio.h>
+
+int findArea(int sideA, int sideB);
+int findRecArea(int area);
+
+
+int main(){
+
+    int a = 0;
+    int b = 0;
+    printf("Enter side A: ");
+    scanf("%d", &a);
+    printf("Enter side b: ");
+    scanf("%d", &b);
+
+    int triangleArea = findArea(a,b);
+    int recArea = findRecArea(triangleArea);
+
+    printf("%d\n", triangleArea);
+    printf("%d\n", recArea);
+
+    return 0;
+}
+
+
+int findArea(int sideA, int sideB){
+    return (sideA * sideB) / 2;
+}
+
+int findRecArea(int area){
+    return area * 2;
+}
