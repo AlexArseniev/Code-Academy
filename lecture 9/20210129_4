@@ -1,0 +1,27 @@
+/*
+Задача 4. Напишете функция, която връща резултат a*2 + b*c.
+*/
+
+#include <stdio.h>
+
+int findResult(int a, int b, int c){
+    return a*2 + b*c;
+}
+
+int main(void){
+
+    int firstNum, secondNum, thirdNum;
+
+    printf("Enter first num: ");
+    scanf("%d", &firstNum);
+    printf("Enter second num: ");
+    scanf("%d", &secondNum);
+    printf("Enter third num: ");
+    scanf("%d", &thirdNum);
+
+    int result = findResult(firstNum, secondNum, thirdNum);
+
+    printf("Result is: %d", result);
+
+    return 0;
+}
