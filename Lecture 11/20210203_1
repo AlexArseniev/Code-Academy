@@ -1,0 +1,34 @@
+/*
+Задача 1 декларирайте три масива с три елемента:
+Първият от тип char
+Вторият от тип int
+Третият от тип double
+Отпечатайте размерите на масивите използвайки
+оператора sizeof(arr);
+*/
+
+/*
+Задача 1.2 принтирайте последния елемент от
+декларираните по горе масиви:
+Първият от тип char
+Вторият от тип int
+Третият от тип double
+*/
+
+#include <stdio.h>
+
+void main(void){
+    
+    char charArr[] = "abc";
+    int intArr[] = {1,2,3};
+    double dobleArr[] = {1.2,3.3,4.5};
+
+    printf("The size of char array is: %d\n", sizeof(charArr));
+    printf("The size of int array is: %d\n", sizeof(intArr));
+    printf("The size of double array is: %d\n", sizeof(dobleArr));
+
+    printf("The last element of the char array is: %c\n", charArr[2]);
+    printf("The last element of the int array is: %d\n", intArr[2]);
+    printf("The last element of the double array is: %lf", dobleArr[2]);
+
+}
