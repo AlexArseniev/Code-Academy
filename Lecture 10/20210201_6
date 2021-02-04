@@ -1,0 +1,29 @@
+/*
+Задача 6. Напишете функция, която изчислява произведението на
+числата от 1 до 30.
+*/
+
+
+#include <stdio.h>
+
+int calculate(void);
+
+
+int main(void){
+
+    printf("%e", calculate());
+
+    return 0;
+}
+
+int calculate(void){
+
+    int i = 1;
+    int total = 1;
+
+    for(i; i <= 30; i++){
+        total *= i;
+    }
+
+    return total;
+}
