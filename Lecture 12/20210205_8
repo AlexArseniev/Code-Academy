@@ -1,0 +1,42 @@
+/*
+Задача 7. Напишете функцията strend(s, t), която връща 1, ако низът t
+се среща в края на низа s и 0 ако това не е изпълнено
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int strend(char *s, char *t);
+
+int main(){
+char arr1[] = "Maracuja";
+char arr2[] = "Papaya";
+strend(arr1, arr2);
+}
+
+int strend(char *s, char *t){
+    int itS = 0;
+    int itT = 0;
+    while(*s){
+        s++;
+    }
+    while(*t){
+        t++;
+        itT++;
+    }
+    while(*t){
+        if(*s == *t){
+            itS++;
+        }
+        s++;
+        t++;
+    }
+    if(itS == itT){
+        printf("arr2 is found at the end of String 1\n");
+        return 1;
+    }
+    else{
+        printf("arr2 is not found at the end of String 1\n");
+        return 0;
+    }
+}
