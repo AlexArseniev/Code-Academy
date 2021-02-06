@@ -1,0 +1,33 @@
+/*
+Задача 9. Напишете функцията strncpy(s, t, n), която копира най -
+много n символа от t в s .
+*/
+
+#include <stdio.h>
+
+void strncpy(char* s, char* t, int n);
+
+int main(void)
+{
+
+    char s[250];
+    char t[] = "Maracuja";
+    int symbols = 0;
+    printf("How many symbols do you want to copy?");
+    scanf("%d", &symbols);
+    strncpy(s, t, symbols);
+    printf("%s", s);
+    return 0;
+}
+
+void strncpy(char *s, char *t, int n)
+{
+    while (n)
+    {
+        *s = *t;
+        s++;
+        t++;
+        n--;
+    }
+    *s = 0;
+}
