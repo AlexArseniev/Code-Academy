@@ -1,0 +1,48 @@
+/*
+7. Напишете един глобален масив, който съдържа на всяка позиция броя на
+дните от месеца. Направете функция, която на която се подават като
+аргументи година, месец и ден. На база на това функцията трябва да върне
+поредния ден от годината. Например 1 март е 60 тия ден от годината.
+*/
+
+#include <stdio.h>
+
+int daysInYear[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+
+unsigned int whatDayIsIt(unsigned int, unsigned int, unsigned int);
+
+int main(void){
+    unsigned int year = 0, month = 0, day = 0;
+
+    printf("Please, enter a year: \n");
+    scanf("%d", &year);
+
+    printf("Please, enter a month (positive number from 1 to 12): \n");
+    scanf("%d", &month);
+
+    printf("Please, enter a day: \n");
+    scanf("%d", &day);
+
+    int result = whatDayIsIt(year, month, day);
+
+    printf("The date: %d.%d.%d is day number %d of the year",day,month,year,result);
+
+    return 0;
+}
+
+unsigned int whatDayIsIt(unsigned int year, unsigned int month, unsigned int day){
+ 
+    if(year % 4 == 0 && year % 100 == 0 && year % 400 == 0){
+        daysInYear[1] = 29;
+    }
+
+    int i = 1, j=1;
+    int result = day;
+
+    for (i; i < month; i++){
+        result += daysInYear[i - 1];
+    }
+
+    return result;
+}
