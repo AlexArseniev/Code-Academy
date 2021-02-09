@@ -1,0 +1,25 @@
+/* Задача 1. Дефинирайте и инициализирайте едномерен масив с 5
+елемента. След като сте готови, направете въвеждане на данните в
+масива, като четете от потребителя със scanf.
+*/
+#include <stdio.h>
+
+int main(void){
+
+    int array[5] = {0, 0, 0, 0, 0};
+    int i = 0;
+
+    for(i; i < 5; i++){
+        printf("Please enter the value for %d posision in the array\n", i);
+        scanf("%d", &array[i]);
+    }
+
+    i = 0;
+
+    printf("The array looks like this: ");
+    for(i; i < 5; i++){
+        printf("%d ", array[i]);
+    }
+    
+    return 0;
+}
