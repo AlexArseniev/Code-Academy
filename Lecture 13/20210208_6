@@ -1,0 +1,33 @@
+/*
+6. Напишете функция, която получава указател към масив с числа и връща
+най-голямото от тях. 
+*/
+
+#include <stdio.h>
+#include <limits.h>
+
+int findNumber(int*, int);
+
+int main(void){
+
+    int array[] = {11,2,33,41,55,6999,7777,22,3,44,567};
+    int size = sizeof(array) / sizeof(array[0]);
+    int result = findNumber(array, size);
+
+    printf("%d", result);
+    return 0;
+}
+
+int findNumber(int* array, int size){
+    
+    int i = 0;
+    int currentValue = INT_MIN;
+
+    for(i; i < size; i++){ 
+        if(array[i] > currentValue){
+            currentValue = array[i];
+        }
+    }
+
+    return currentValue;
+}
