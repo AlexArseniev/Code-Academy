@@ -1,0 +1,39 @@
+/*
+Задача 1. Напишете програма, която сумира всички елементи на масив
+намиращи се на четна позиция:
+int arr[10] = {23, 91, 36, 4, 9, 99, 87, 11, 2, 33};
+Декларирайте пойнтер към първата нечетна позиция, инкрементирайте
+пойнтера по подходящ начин, за да извършите сумирането.
+*/
+
+#include <stdio.h>
+
+int main(void){
+
+    int arr[10] = {23, 91, 36, 4, 9, 99, 87, 11, 2, 33};
+    int key = 0; 
+    
+    here:
+    printf("For the total value of the even positions press 0\nFor the total value of the odd positions press 1\n");
+    scanf("%d", &key);
+    
+    if(key < 0 || key > 1){
+        goto here;
+    }
+
+    int *p = NULL;
+    p = arr;
+    int total = 0;
+
+    for(key; key < 10; key+=2){
+        total += *(p + key);
+    }
+
+    if(key == 0) {
+        printf("The value of the numbers on even posisions is: %d", total);
+    } else {
+        printf("The value of the numbers on odd positions is: %d", total);
+    }
+
+    return 0;
+}
