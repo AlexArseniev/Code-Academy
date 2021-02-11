@@ -1,0 +1,44 @@
+/*
+Задача 4.
+Напишете програма, която да генерира случайна парола от 6 букви
+докато user-а я хареса.
+Вариант 1: може да използвате цикли while/for + стрингове
+Вариант 2: използвайте функция
+Указания:
+1. Генерирайте парола
+2. Проверете дали потребителя е харесва
+3. Повторете докато потребителя си хареса паролата
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX 6
+
+int main(void){
+
+
+    char password[MAX];
+    char *p = password;
+    srand(time(0));
+    char answer;
+
+    while (answer != 'y'){
+
+        for(int i = 0; i < 6; i++){
+            *p = ((rand()%26) + 97);
+            p++;
+        }
+        
+        printf("This could be your new password: %s\n", password);
+        printf("If you like it press 'y'.\nIf you want to change it press any other key.\n");
+        scanf("%c", &answer);
+        if(answer != 'y'){
+            p = &password[0];
+        }
+    }
+
+    printf("Your new password is: %s", password);
+
+    return 0;
+}
