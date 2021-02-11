@@ -1,0 +1,48 @@
+/*
+Задача 6. Пренапишете функцията int linear_search(const int a[], int n, int
+key); използайки пойнтер аритмртиката без инкрементиращи променливи.
+*/
+
+
+#include <stdio.h>
+#define MAX 10
+
+int findPos(int*, int, int);
+
+int main(void){
+
+    int arr[MAX] = {23, 91, 36, 4, 9, 99, 87, 11, 2, 33};
+    int number = 0;
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printf("Please enter the number you want to search in the array: \n");
+    scanf("%d", &number);
+    int result = findPos(arr, number, size);
+
+    if(result >= 0){
+        printf("The number you are looking for is on %d position in the array", result);
+    } else {
+        printf("The numebr you are looking for is not found in the array");
+    }
+    return 0;
+}
+
+int findPos(int* p, int n, int size){
+
+    int position = 0;
+    int flag = -1;
+
+    while (size >= 0){
+        if(*p == n){
+            flag = 0;
+            break;
+        }
+        position++;
+        p++;
+        size--;
+    }
+    if(flag >= 0){
+        return position;
+    } else{
+        return flag;
+    }
+}
