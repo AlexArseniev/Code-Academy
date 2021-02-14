@@ -31,7 +31,7 @@ int main(void){
 
         *(p + i++) = c;
 
-        if(i == (l - 1)){
+        if(i >= (l - 1)){
             p = (char*) realloc(p, (l + 1) * sizeof(char));
             if(NULL == p) {
                 printf("Not enough mana!");
