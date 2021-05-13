@@ -1,0 +1,1 @@
+rm -f projects/house6 projects/house7 projects/house8 
