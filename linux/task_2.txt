@@ -1,0 +1,6 @@
+mkdir -p $HOME/projects/houses/doors
+or 
+mkdir -p projects/houses/doors
+touch $HOME/projects/houses/bungalow.txt 
+touch projects/houses/bifold.txt 
+mkdir -p projects/outdoors/vegetation &&touch ~/projects/outdoors/vegetation/landscape.txt
